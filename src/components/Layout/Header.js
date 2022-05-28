@@ -3,12 +3,12 @@ import foodImage from "../../assets/meals.jpg";
 import CartButton from "./CartButton";
 import classes from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>React Hotel</h1>
-        <CartButton />
+        <CartButton showCartOnClick={props.showCartOnClick} />
       </header>
       <div className={classes["main-image"]}>
         <img src={foodImage} alt="Food on table" />
